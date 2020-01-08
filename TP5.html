@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TP5</title>
+    </head>
+    <body>
+        <script>
+            //ex1
+            function maxOfThree(a,b,c){
+                return Math.max(a,b,c);
+            }
+            alert(maxOfThree(70,55,90));
+
+            //ex2
+            function bubble_sort(arr){
+                var n =arr.length;
+                for (var i=0;i<n-1;i++){
+                    for(var j=0;j<n-i-1;j++){
+                        if(arr[j]>arr[j+1]){
+                            var temp = arr[j]; 
+                            arr[j] = arr[j+1]; 
+                            arr[j+1] = temp;
+            }
+        }
+    }
+                return arr;
+}
+            alert(bubble_sort([1,5,8,9,4,3,2,7,6,10]));
+
+            //ex3
+            function reverseString(str) {
+                var newString = "";
+                for (var i = str.length - 1; i >= 0; i--) {
+                    newString += str[i];
+            }       
+                return newString;
+        }
+            reverseString('hello');
+            alert(reverseString('hello'));
+
+            //ex4
+            function strcasecmp(s1,s2){
+                s1=(s1+'').toLowerCase();
+                s2=(s2+'').toLowerCase();
+                //return s1>s2?1:(s1<s2?-1:0);
+                return result=s1.toLowerCase()===s2.toLowerCase();
+            }
+
+            alert(strcasecmp("hello","Hello")); 
+
+            //ex5
+            function translatePigLatin(str) {
+                var firstVowel = str.search(/[aeiou]/);
+  
+                return firstVowel === 0 ? str + 'way' : str.substr(firstVowel) + str.substr(0, firstVowel) + 'ay';
+            }
+            alert(translatePigLatin("inbox")); 
+            
+        </script>
+    </body>
+
+</html>
